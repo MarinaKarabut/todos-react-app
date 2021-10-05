@@ -1,0 +1,23 @@
+.navbarMenu {
+  &Item {
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+  &Link {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.active {
+  color: #ffbc33;
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ffbc33;
+    margin-top: 5px;
+  }
+}

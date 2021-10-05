@@ -1,0 +1,40 @@
+.todo {
+  &Item {
+    border-radius: 5px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    color: #000;
+  }
+  &Title {
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &BtnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &Checkbox {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+  }
+}
+
+.btnDelete {
+  width: 130px;
+  background-color: #ff0000;
+  &:hover,
+  &:focus {
+    background-color: #a52a2a;
+  }
+}
