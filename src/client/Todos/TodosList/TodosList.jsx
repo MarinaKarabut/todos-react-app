@@ -1,6 +1,7 @@
 import { useCallback} from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
+import PropTypes from 'prop-types'
 
 import TodosListItem from '../TodosListItem';
 import { deleteTodo, toggleCompleted } from '../../../redux/todos/todos-operations';
@@ -49,3 +50,14 @@ function TodosList({ todos }) {
 };
 
 export default TodosList;
+
+TodosList.defaultProps = {
+    todos: [],
+
+}
+
+
+TodosList.propTypes = {
+    todos: PropTypes.array,
+
+}

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import Button from '../../../shared/components/Button';
 
 import styles from './TodosListItem.module.scss';
@@ -17,3 +19,18 @@ const TodosListItem = ({ title, completed, onDelete, onToggleCompleted }) => {
 };
 
 export default TodosListItem;
+
+TodosListItem.defaultProps = {
+    title: '',
+    completed: false,
+    onDelete: () => { },
+    onToggleCompleted: () => { }
+}
+
+
+TodosListItem.propTypes = {
+    title: PropTypes.string,
+    completed: PropTypes.bool,
+    onDelete: PropTypes.func,
+    onToggleCompleted: PropTypes.func,
+}
