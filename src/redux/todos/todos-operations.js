@@ -52,7 +52,6 @@ export const toggleCompleted = (id, body) => async dispatch => {
   dispatch(toggleCompletedRequest());
   try {
     const { data } = await axios.put(`/todos/${id}`, body);
-    console.log(data);
     dispatch(toggleCompletedSuccess(data));
   } catch (error) {
     dispatch(toggleCompletedError(error.message));

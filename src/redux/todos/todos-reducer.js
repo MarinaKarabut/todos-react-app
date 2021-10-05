@@ -15,10 +15,8 @@ const todos = createReducer(initialStateTodos, {
   [addTodoSuccess]: (state, { payload }) => [payload, ...state],
 
   [deleteTodoSuccess]: (state, { payload }) => {
-    console.log(payload.id);
     const newState = [...state];
     const index = newState.findIndex(todo => todo.id === payload.id);
-    console.log(index);
     newState.splice(index, 1);
     return [...newState];
   },
